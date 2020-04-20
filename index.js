@@ -15,16 +15,6 @@ console.log(fifaData);
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-// function getFinals(){
-//     return finals()
-
-// }
-
-
-
-// getFinals(data);
-// console.log(getFinals);
-
 const getFinals = fifaData.filter(function(item){
     return item.Stage === 'Final';
 })
@@ -36,41 +26,15 @@ console.log(getFinals);
 
 /* Task 3: Impliment a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
-// const years = [];
-// fifaData.forEach(function(item){
-//     if(item.Stage === 'Final'){
-//     return years.push(item.Year)};
-// });
-// console.log(years);
-
-// function getYears(){
-//     return getFinals()
-// }
-
-// const years = [];
-// fifaData.forEach(function(item, getFinals){
-//     if(item.Stage === 'Final'){
-//     return years.push(item.Year)};
-// });
-// console.log(years);
-
 const getYears = getFinals.map(function(item){
     return item.Year;
 })
 console.log(getYears);
 
-// function getYears(years, getFinals)
 
 
 /* Task 5: Impliment a higher-order function called `getWinners`, that accepts the callback function `getFinals()` and determine the winner (home or away) of each `finals` game. Return the name of all winning countries in an array called `winners` */ 
 
-// function getWinners(/* code here */) {
-
-//     /* code here */
-
-// };
-
-// getWinners();
 
 const getWinners = [];
 getFinals.forEach(function(item){
@@ -96,9 +60,12 @@ Parameters:
 
 // getAllWinners();
 
-function getAllWinners(item, index, getWinners){
-    console.log(`item[ index`)
-}
+const getAllWinners = [];
+getYears.forEach(function(item, index){
+    const allWinners = getWinners[index];  
+    getAllWinners.push(`In ${item}, ${allWinners} won the world cup!`);
+})
+console.log(getAllWinners);
 
 
 /* Task 7: Create a function called `getCountryWins` that takes the parameters `data` and `team initials` and returns the number of world cup wins that country has had. 
