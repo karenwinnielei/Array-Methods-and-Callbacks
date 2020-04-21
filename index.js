@@ -78,24 +78,6 @@ console.log(getAllWinners);
 Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
 
-// function getCountryWins(/* code here */) {
-
-//     /* code here */
-
-// };
-
-// getCountryWins();
-
-// const getCountryWins = getFinals.reduce(function(data, initials){
-//     console.log()
-
-
-// }, 0);
-
-// function getCountryWins(data, teamInitials){
-//     const 
-
-// }
 const initials = [];
 getFinals.forEach(function(item){
     if(item["Home Team Goals"] > item["Away Team Goals"]){
@@ -114,13 +96,25 @@ console.log(getCountryWins);
 
 /* Task 8: Write a function called getGoals() that accepts a parameter `data` and returns the team with the most goals score per appearance (average goals for) in the World Cup finals */
 
-function getGoals(/* code here */) {
+// function getGoals(/* code here */) {
 
-    /* code here */
+//     /* code here */
 
-};
+// };
 
-getGoals();
+// getGoals();
+
+// const goals = [];
+// getFinals.forEach(function(item){
+//     goals.push(item["Home Team Name"], item["Home Team Goals"], item["Away Team Name"], item["Away Team Goals"]);
+// });
+// console.log(goals);
+
+const goals = [];
+let obj = {};
+obj[`${getFinals["Home Team Name"]}`] = `${getFinals["Home Team Goals"]}`;
+goals.push(obj);
+console.log(goals);
 
 
 /* Task 9: Write a function called badDefense() that accepts a parameter `data` and calculates the team with the most goals scored against them per appearance (average goals against) in the World Cup finals */
